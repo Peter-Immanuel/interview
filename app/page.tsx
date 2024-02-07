@@ -1,9 +1,10 @@
+'use client'
+
 import Question from "./questions";
-import useState from "react"
+import {useState} from "react";
 
 function Home() {
-
-  
+  const [count, setCount] = useState(0);
   const questions = [
     {
       question: "What is the capital of FCT",
@@ -27,13 +28,13 @@ function Home() {
     },
   ];
 
-  // const [count, setCount] = useState(1)
+  
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
       <div className=""> 
         <div className="mb-4">Question Quiz</div>
-          <Question question={questions[0]}/>
+          <Question question={questions[count]}/>
       </div>
     </main>
   );
